@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bousso's digital archive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            height: 100vh;
+            overflow: visible; 
+        }
+
+        h1 {
+            margin: 60px; 
+            text-align: center; 
+            position: fixed; 
+            z-index: 1; 
+        }
+        img.header-img {
+            width: 100%;
+            max-width: 500px; 
+            height: 50vh;
+            margin: 0;
+            border: none;
+            transition: none;
+            justify-content: center;
+        }
+
+        .gallery {
+            display: grid;
+            gap: 0px; 
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            height: calc(100vh - 150px); 
+            width: 100%; 
+            max-width: 1200px; 
+            padding: 5px; 
+            position: relative; 
+            overflow: visible;
+        } 
+
+        img {
+            border: 5px solid rgba(255, 255, 255);
+            transition: transform 0.3s, box-shadow; 
+            position: relative; 
+            max-width: 120%; 
+            max-height: 120%; 
+            transform: rotate(calc(-5deg * var(--random))) translate(calc(var(--x-offset)), calc(var(--y-offset)));
+            z-index: 0; /* Ensure images are below the header */
+        }
+
+        img:hover {
+            transform: scale(1.1) rotate(0deg);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>
+    <img class="header-img" src="photos/Untitled.png" alt="Header Image">
+</h1>
+
+<div class="gallery">
+    <img src="photos/1.jpg" class="lazy" alt="Image 1" style="--random: 1; --x-offset: -10px; --y-offset: -10px;">
+    <img src="photos/2.jpg" class="lazy" alt="Image 2" style="--random: 2; --x-offset: 20px; --y-offset: 0px;">
+    <img src="photos/3.jpg" class="lazy" alt="Image 3" style="--random: 3; --x-offset: -15px; --y-offset: 15px;">
+    <img src="photos/4.JPG" class="lazy" alt="Image 4" style="--random: 1; --x-offset: 10px; --y-offset: -20px;">
+    <img src="photos/5.jpg" class="lazy" alt="Image 5" style="--random: 2; --x-offset: 15px; --y-offset: 5px;">
+    <img src="photos/6.png" class="lazy" alt="Image 6" style="--random: 2; --x-offset: -20px; --y-offset: 10px;">
+    <img src="photos/7.JPG" class="lazy" alt="Image 7" style="--random: 4; --x-offset: 5px; --y-offset: -25px;">
+    <img src="photos/8.jpg" class="lazy" alt="Image 8" style="--random: 2; --x-offset: -10px; --y-offset: 20px;">
+    <img src="photos/9.jpg" class="lazy" alt="Image 9" style="--random: 4; --x-offset: 20px; --y-offset: 10px;">
+    <img src="photos/10.jpg" class="lazy" alt="Image 10" style="--random: 6; --x-offset: -10px; --y-offset: -10px;">
+    <img src="photos/11.jpg" class="lazy" alt="Image 11" style="--random: 2; --x-offset: 10px; --y-offset: 15px;">
+    <img src="photos/13.png" class="lazy" alt="Image 13" style="--random: 1; --x-offset: 5px; --y-offset: 20px;">
+    <img src="photos/144.jpg" class="lazy" alt="Image 14" style="--random: 2; --x-offset: -15px; --y-offset: 15px;">
+    <img src="photos/155.jpg" class="lazy" alt="Image 15" style="--random: 5; --x-offset: 10px; --y-offset: -15px;">
+    <img src="photos/16.jpg" class="lazy" alt="Image 16" style="--random: 1; --x-offset: -10px; --y-offset: -5px;">
+    <img src="photos/17.jpg" class="lazy" alt="Image 17" style="--random: 2; --x-offset: 15px; --y-offset: 10px;">
+    <img src="photos/19.jpg" class="lazy" alt="Image 19" style="--random: 4; --x-offset: 10px; --y-offset: -10px;">
+    <img src="photos/20.jpg" class="lazy" alt="Image 20" style="--random: 2; --x-offset: -20px; --y-offset: 15px;">
+    <img src="photos/21.jpg" class="lazy" alt="Image 21" style="--random: 2; --x-offset: 5px; --y-offset: -15px;">
+    <img src="photos/22.jpg" class="lazy" alt="Image 22" style="--random: 1; --x-offset: -10px; --y-offset: 10px;">
+    <img src="photos/23.jpg" class="lazy" alt="Image 23" style="--random: 2; --x-offset: 20px; --y-offset: -10px;">
+    <img src="photos/25.jpg" class="lazy" alt="Image 19" style="--random: 4; --x-offset: 10px; --y-offset: -10px;">
+    <img src="photos/26.png" class="lazy" alt="Image 20" style="--random: 2; --x-offset: -20px; --y-offset: 15px;">
+    <img src="photos/27.jpg" class="lazy" alt="Image 21" style="--random: 2; --x-offset: 5px; --y-offset: -15px;">
+    <img src="photos/28.jpg" class="lazy" alt="Image 22" style="--random: 1; --x-offset: -10px; --y-offset: 10px;">
+    <img src="photos/29.jpg" class="lazy" alt="Image 23" style="--random: 2; --x-offset: 20px; --y-offset: -10px;">
+    <img src="photos/31.jpg" class="lazy" alt="Image 19" style="--random: 4; --x-offset: 10px; --y-offset: -10px;">
+    <img src="photos/32.jpg" class="lazy" alt="Image 20" style="--random: 2; --x-offset: -20px; --y-offset: 15px;">
+    <img src="photos/33.jpg" class="lazy" alt="Image 21" style="--random: 2; --x-offset: 5px; --y-offset: -15px;">
+    <img src="photos/30.jpg" class="lazy" alt="Image 23" style="--random: 2; --x-offset: 20px; --y-offset: -10px;">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll("img.lazy");
+        
+        function lazyLoad() {
+            lazyImages.forEach((image) => {
+                if (image.getBoundingClientRect().top <= window.innerHeight && !image.src) {
+                    image.src = image.dataset.src; // Load the image from data-src
+                    image.classList.remove("lazy");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", lazyLoad);
+        lazyLoad(); // Run on page load to load images that are already in view
+    });
+</script>
+
+</body>
+</html>
