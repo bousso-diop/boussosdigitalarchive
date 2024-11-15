@@ -30,7 +30,6 @@
             border: none;
             transition: none;
             justify-content: center;
-            position: fixed
         }
 
         .gallery {
@@ -52,7 +51,7 @@
             max-width: 120%; 
             max-height: 120%; 
             transform: rotate(calc(-5deg * var(--random))) translate(calc(var(--x-offset)), calc(var(--y-offset)));
-            z-index: 0; /* Ensure images are below the header */
+            z-index: 0; 
         }
 
         img:hover {
@@ -139,10 +138,9 @@
         }
 
         window.addEventListener("scroll", lazyLoad);
-        lazyLoad(); // Run on page load to load images that are already in view
+        lazyLoad(); 
     });
 </script>
 
 </body>
 </html>
-
